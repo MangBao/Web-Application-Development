@@ -1,0 +1,396 @@
+<!--  link hình ảnh -->
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiểm tra Bootstrap (Trang chủ)</title>
+  <!-- Import Bootstrap css, js, font awesome here -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- File css + js of you -->
+  <script src="./sachkinhte.min.js"></script>
+  <link rel="stylesheet" href="./sachkinhte.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+  <!-- Font-family: Gamja Flower -->
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- http://placehold.jp/1090x400.png -->
+
+  <!-- Logo -->
+  <div class="logo d-none d-md-block mb-1">
+    <div class="d-flex justify-content-between">
+      <div class="d-flex">
+        <a href="#" class="m-0 p-0">
+          <img src="multi/logo/Logo-01.jpg" class="image-fluid" />
+        </a>
+        <div class="infobook ml-2">
+          <p class="mt-2 mb-1">
+            <span class="fa fa-phone mr-2 "></span>
+            <span>0928.979.688</span>
+          </p>
+          <p class="my-0">
+            <span class="fa fa-envelope mr-2 "></span>
+            <span>nhasachphuongnam@phuongnam.vn</span>
+          </p>
+        </div>
+      </div>
+      <div class="d-flex align-self-end">
+        <a href="#" class="mr-3 blocklgin" data-toggle="modal" data-target="#login">
+          <span class="fas fa-sign-in-alt"></span> Đăng nhập
+        </a>
+        <div class="modal" id="login">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Đăng nhập</h4>
+                <button class="close" type="button" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <div class="row my-2 p-0 m-0">
+                  <h5 class="col-4 p-0 mb-2 text-right">Tên đăng nhập:</h5>
+                  <input type="text" class="txtlg col-7 mb-2" placeholder="Nhập tên đăng nhập">
+                  <h5 class="col-4 p-0 m-0  text-right">Mật khẩu:</h5>
+                  <input type="password" class="txtpw col-7" placeholder="Nhập mật khẩu">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="float-right">Quên mật khẩu</a>
+                <button class="btn btn-warning btnlgin" type="button">Đăng nhập</button>
+                <button class="btn btn-danger" type="button" data-dismiss="modal">Đóng</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="mr-4 mb-1 blocksgup" data-toggle="modal" data-target="#signup">
+          <span class="fas fa-user-plus"></span> Đăng ký
+        </a>
+        <div class="modal" id="signup">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Đăng ký</h4>
+                <button class="close" type="button" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body row">
+                <h5 class="col-4 p-0 mb-2 text-right">Tên tài khoản:</h5>
+                <input type="text" class="txtlg col-7 mb-2" placeholder="Nhập tên tài khoản">
+                <h5 class="col-4 p-0 m-0 mb-2 text-right">Mật khẩu:</h5>
+                <input type="password" class="col-7 mb-2" placeholder="Nhập mật khẩu">
+                <h5 class="col-4 p-0 m-0 mb-2 text-right">Xác nhận mật khẩu:</h5>
+                <input type="password" class="col-7 mb-2" placeholder="Nhập lại mật khẩu">
+                <h5 class="col-4 p-0 m-0 mb-2 text-right">Mail:</h5>
+                <input type="password" class="col-7 mb-2" placeholder="Nhập mail">
+                <h5 class="col-4 p-0 m-0 mb-2 text-right">Số điện thoại:</h5>
+                <input type="password" class="col-7 mb-2" placeholder="Nhập số điện thoại">
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-warning" type="button">Xác nhận đăng ký</button>
+                <button class="btn btn-danger" type="button" data-dismiss="modal">Đóng</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Logo -->
+
+  <!-- Menubar -->
+  <div class="containermenubar">
+      <nav class="menu navbar navbar-expand-md navbar-light d-flex border-0 sticky-top p-0" id="menu">
+        <div class="navbar-toggler w-100 border-0 p-0 text-center">
+          <button class="navbar-toggler mb-1 float-left" data-toggle="collapse" data-target="#area1">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <button class="navbar-toggler float-right" data-toggle="collapse" data-target="#area2">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="area1" data-parent="#menu">
+          <ul class="navbar-nav">
+            <li class="navbar-item">
+              <a href="../../trangchu.html" class="nav-link"><span class="fa fa-home"></span>Trang chủ</a>
+            </li>
+            <li class="navbar-item dropdown d-flex">
+              <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Thể loại</a>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-header text-decoration-none py-0">Văn học</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Văn học đương đại</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Văn học cận đại</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Văn học thế giới</a>
+                <p class="dropdown-divider"></p>
+                <a href="#" class="dropdown-header text-decoration-none py-0">Kinh tế</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Kinh tế thương mại</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Kinh tế nông nghiệp</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Kinh tế taì chính</a>
+                <p class="dropdown-divider"></p>
+                <a href="#" class="dropdown-header text-decoration-none py-0">Kỹ năng sống</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Kỹ năng sống ở rừng</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Kỹ năng sống ở đảo</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Kỹ năng sống ở sa mạc</a>
+                <p class="dropdown-divider"></p>
+                <a href="#" class="dropdown-header text-decoration-none py-0 text-dark">Khoa học - kỹ thuật</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Trí tuệ nhân tạo</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Khoa học máy tính</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Kỹ thuật nhiệt máy</a>
+                <p class="dropdown-divider"></p>
+                <a href="#" class="dropdown-header text-decoration-none py-0 text-dark">Lịch sử</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Lịch sử thế giới</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Lịch sử nước ta</a>
+                <a href="#" class="dropdown-item p-0 pl-2">Lịch sử vũ trụ</a>
+              </div>
+            </li>
+            <li class="navbar-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Liên hệ</a>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Tư vấn</a>
+                <p class="dropdown-divider"></p>
+                <a href="#" class="dropdown-item">Văn phòng</a>
+                <p class="dropdown-divider"></p>
+                <a href="#" class="dropdown-item">Đ/c các nhà sách</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse text-right justify-content-end" id="area2" data-parent="#menu">
+          <form class="form-inline my-1 w-100">
+            <div class="input-group w-100">
+              <div class="input-group-prepend">
+                <button class="btn btn-success" type="submit">
+                  <span class="fas fa-search"></span>
+                </button>
+              </div>
+              <input type="text" class="form-control" placeholder="Tìm kiếm sách (gõ tên tác giả/ tên sách)" />
+            </div>
+          </form>
+          <ul class="navbar-nav mr-2 d-md-none">
+            <li class="navbar-item">
+              <a href="#" class="nav-link">
+                <span class="fas fa-sign-in-alt"></span> Đăng nhập
+              </a>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="nav-link">
+                <span class="fas fa-user-plus"></span> Đăng ký
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+  
+  </div>
+  <!-- END Menubar -->
+
+  <!-- Content -->
+  <div class="container">
+    <!-- Welcome -->
+    <div class="welcome">
+      <div class="row text-center mt-5">
+        <hr class="hr1 mx-auto mt-2" />
+        <div class="col-8 offset-2 font-italic">
+          Sách kinh tế
+        </div>
+      </div>
+    </div>
+    <!-- END Welcome -->
+
+    <!-- Productss -->
+   
+    <div class="productss productss1">
+      <hr class="hr3 mx-auto mt-2" />
+      <div class="row mb-4">
+        <div class="col-12 col-md-3">
+          <a href="#">
+            <div class="card">
+              <img class="card-img-top" src="multi/kinhte/1.jpg">
+              <div class="card-body">
+                <p>Nếu tôi biết được khi còn 20</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-md-3 d-none d-md-block">
+          <a href="#">
+            <div class="card">
+              <img class="card-img-top" src="multi/kinhte/2.jpg">
+              <div class="card-body">
+                <p>Từ tốt đến vĩ đại</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-md-3 d-none d-md-block">
+          <a href="#">
+            <div class="card">
+              <img class="card-img-top" src="multi/kinhte/3.jpg">
+              <div class="card-body">
+                <p>Nghĩ giàu & làm giàu</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-md-3 d-none d-md-block">
+          <a href="../Webselfdesigned/pages/sach/">
+            <div class="card">
+              <img class="card-img-top" src="multi/kinhte/4.jpg">
+              <div class="card-body">
+                <p>Tiệm cơm & quán nhậu</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-3">
+          <a href="#">
+            <div class="card">
+              <img class="card-img-top" src="multi/kinhte/5.jpg">
+              <div class="card-body">
+                <p>Tất cả chỉ là thử thách</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      </div>
+    <div class="mt-4">
+      </a>
+      <nav aria-label="Page navigation example mx-auto d-flex">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    
+    <!-- END Productss -->
+
+    <!-- END Introduce products -->
+    <!-- Intro Phương Nam -->
+    <div class="mt-4">
+      <h4 class="text-center mb-0">Giới thiệu về nhà sách <span
+            class="pp">Phương Nam</span>
+      </h4>
+      <div class="container">
+        <hr class="hr5 mx-auto mt-2">
+      <p class="my-2">
+        <span class="font-weight-bold">Nhà sách Phương Nam</span>Tháng 02.1982, công ty Văn hóa Dịch vụ Tổng hợp Quận 11 được thành lập, trực thuộc phòng VHTT Quận 11 chính là tiền thân của Công ty Cổ phần Văn hóa Phương Nam ngày nay.
+        Tháng 08.1999, trải qua quá trình phát triển lớn mạnh không ngừng, đa dạng hóa sản phẩm và dịch vụ sang các lĩnh vực như điện ảnh ( hãng phim Phương Nam), in ấn ( Xưởng in Phương Nam),... Công ty Phương Nam hoàn tất tiến trình cổ phần hóa, trở thành Công ty Cổ phần SXKD Vật phầm Văn hóa Phương Nam, đánh dấu một giai đoạn chuyển mình đầy cơ hội và thách thức.
+        Tháng 05.2004, với 6 chi nhánh đặt tại các vùng trọng điểm như Hà Nội, Huế, Đà Nẵng, Cần Thơ... cùng với hơn 20 trung tâm phát hành lớn trong cả nước, Phương Nam chính thức đổi tên thành Công ty Cổ phần Văn hóa Phương Nam.
+        Đến nay, cùng với các đối tác lớn như Tập đoàn Envoy Media (Mỹ), Longman (Anh), Indochina Capital, Caravelle Fund, East Media Holdings Incorpration (EMHI) ... Phương Nam đang phát triển sang các lĩnh vực như kinh doanh khai thác cụm rạp chiếu phim cao cấp, phát hành độc quyền... đón đầu thời kỳ hội nhập mới trong tương lai. 
+      </p>
+      </div>
+    </div>
+    <!-- Intro Phương Nam -->
+  </div>
+  <!-- End Content -->
+
+  <!-- Footer -->
+  <hr class="hr6 mx-auto mb-2" />
+  <div class="footer">
+    <div class="footer pt-2 mt-4">
+      <div class="container mx-auto row text-center text-md-left">
+        <div class="col-sm-12 col-md-3">
+          <h4 class="text-dark">Về chúng tôi</h4>
+          <ul style="list-style-type: none;" class="p-0">
+            <li>
+              <a class="text-decoration-none text-black-50" href="#">Blog</a>
+            </li>
+            <li>
+              <a class="text-decoration-none text-black-50" href="">Nhân viên tư vấn</a>
+            </li>
+            <li class="mt-3">
+              <img src="multi/footer/giayphep.webp" />
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <h4 class="text-dark">Thông tin</h4>
+          <ul style="list-style-type: none;" class="p-0">
+            <li>
+              <a href="" class="text-decoration-none text-black-50">Thanh toán và bảo mật</a>
+            </li>
+            <li>
+              <a href="" class="text-decoration-none text-black-50">Giao hàng miễn phí</a>
+            </li>
+            <li>
+              <a href="" class="text-decoration-none text-black-50">Điều khoản sử dụng</a>
+            </li>
+            <li>
+              <a href="" class="text-decoration-none text-black-50">Chính sách ưu đãi</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-2">
+          <h4 class="text-dark">Tư vấn</h4>
+          <ul style="list-style-type: none;" class="p-0">
+            
+            <li>
+              <a href="" class="text-decoration-none text-black-50">Trao đổi, giao dich</a>
+            </li>
+            <li>
+              <a href="" class="text-decoration-none text-black-50">Văn phòng</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-12 col-md-4 pl-4">
+          <h4 class="text-dark mb-0">Liên hệ qua</h4>
+          <ul style="list-style-type: none;" class="p-0 mt-2">
+            <li>
+              <span class="fab fa-facebook text-primary mb-2 iconfooter"></span><a href="#"
+                class="text-decoration-none mt-2 iconfooter">
+                https://www.facebook.com/phuongnambook
+              </a>
+            </li>
+            <li>
+              <span class="fab fa-twitter text-primary mb-2 iconfooter"></span><a href="#"
+                class="text-decoration-none mt-2 iconfooter">
+                https://www.twitter.com/phuongnambook
+              </a>
+            </li>
+            <li>
+              <span class="fab fa-youtube text-danger mb-2 iconfooter"></span><a href="#"
+                class="text-decoration-none mt-2 iconfooter">
+                https://www.youtube.com/phuongnambook
+              </a>
+            </li>
+            <li>
+              <p class="mt-1 mb-1">
+                <span class="fa fa-phone mr-2"></span>0928.979.688
+              </p>
+              <p class="my-0">
+                <span class="fa fa-envelope mr-2"></span>nhasachphuongnam@phuongnam.vn
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Footer -->
+</body>
+
+</html>

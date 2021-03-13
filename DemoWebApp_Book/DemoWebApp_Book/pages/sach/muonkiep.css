@@ -1,0 +1,172 @@
+body {
+    font-family: 'Galada', cursive;
+    font-size: 20px;
+}
+/* Bag */
+.bag{
+    position: fixed;
+    right: 20px;
+    top:300px;
+}
+.bag i{
+    font-size: 50px;
+    color: orange;
+}
+.bag i:hover{
+    cursor: pointer;
+}
+/* END Bag */
+/* Logo */
+.logo{
+    padding: 0 100px;
+}
+.logo img {
+    width: 355px;
+
+}
+
+.logo ul {
+    list-style-type: none;
+}
+
+.logo .align-self-end a {
+    text-decoration: none;
+    color: rgba(82, 64, 120, 0.9);
+}
+
+.logo .align-self-end a:hover {
+    color: #000000;
+}
+/* END Logo */
+
+/* Menu */
+.containermenubar{
+    background-color: rgba(82, 64, 120, 0.9) !important;
+    padding: 0 100px;
+}
+.containermenubar .dropdown-menu{
+    width: 500px;
+    float:right !important;
+}
+.containermenubar .dropdown-menu a{
+    color: black;
+}
+.containermenubar .dropdown-menu .dropdown-header{
+    font-size: 20px;
+}
+.containermenubar .dropdown-menu a:hover{
+    background-color: rgba(82, 64, 120, 0.9);
+    color: white;
+}
+.menu li .nav-link {
+    color: white !important;
+}
+
+.menu li .nav-link:hover {
+    color: black !important;
+}
+
+.menu .navbar-toggler img {
+    width: 53px;
+    border-radius: 50px;
+}
+
+/* END Menu */
+/* Products */
+.container .productss .card{
+    border:none;
+}
+.container .productss .text-center{
+    font-size: 20px;
+
+}
+.container .col-3 .btnsell .add {
+    width: 58%;
+}
+
+.container .col-3 .btnsell .add:focus {
+    outline: none;
+}
+
+.container .col-3 .btnsell .add:active {
+    font-size: 14.5px;
+}
+
+.container .col-3 .btnsell .sell {
+    width: 40%;
+}
+
+.container .col-3 .btnsell .sell:focus {
+    outline: none;
+}
+
+.container .col-3 .btnsell .sell:active {
+    font-size: 14.5px;
+}
+.container .col-3 .card-footer{
+    padding-top: 15px !important;
+    width: 350px;
+    height: 100px;
+    border: none;
+}
+.container .col-3 .card-footer button{
+    height: 51px;
+    background: #ff7600;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 1px 5px 6px #ad6d0e;
+    margin-right: 5px;
+}
+.container .col-9 .row{
+    border-bottom: solid thin black;
+}
+.container .col-9 .row .name{
+    margin-top:10px;
+}
+.container .col-9 .row .contain{
+    margin-top:10px;
+}
+/* END Products */
+
+
+/* Footer */
+.hr6 {
+    width: 86%;
+    border: solid 1px rgb(62, 44, 100, 0.6);
+    border-radius: 20px;
+    margin: 30px;
+}
+
+.footer {
+    background-color: #f1f1f1;
+}
+
+.footer .container a:hover {
+    color: orange !important;
+}
+
+.footer .container .col-sm-12 {
+    padding: 0;
+}
+
+.footer .container a {
+    font-size: 18px;
+}
+
+.footer .container h4 {
+    font-size: 20px;
+}
+
+.footer .container .texticonfooter span {
+    font-size: 18px;
+}
+
+.footer .container .iconfooter {
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+/* END Footer */

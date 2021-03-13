@@ -1,0 +1,106 @@
+body {
+    font-family: 'Galada', cursive;
+    font-size: 20px;
+}
+
+/* Logo */
+.logo{
+    padding: 0 100px;
+}
+.logo img {
+    width: 355px;
+
+}
+
+.logo ul {
+    list-style-type: none;
+}
+
+.logo .align-self-end a {
+    text-decoration: none;
+    color: rgba(82, 64, 120, 0.9);
+}
+
+.logo .align-self-end a:hover {
+    color: #000000;
+}
+/* END Logo */
+
+/* Menu */
+.containermenubar{
+    background-color: rgba(82, 64, 120, 0.9) !important;
+    padding: 0 100px;
+}
+.containermenubar .dropdown-menu{
+    width: 500px;
+    float:right !important;
+}
+.containermenubar .dropdown-menu a{
+    color: black;
+}
+.containermenubar .dropdown-menu .dropdown-header{
+    font-size: 20px;
+}
+.containermenubar .dropdown-menu a:hover{
+    background-color: rgba(82, 64, 120, 0.9);
+    color: white;
+}
+.menu li .nav-link {
+    color: white !important;
+}
+
+.menu li .nav-link:hover {
+    color: black !important;
+}
+
+.menu .navbar-toggler img {
+    width: 53px;
+    border-radius: 50px;
+}
+
+/* END Menu */
+/* Pay */
+.container{
+    margin-bottom:300px;
+}
+/* END Pay */
+
+
+/* Footer */
+.hr6 {
+    width: 86%;
+    border: solid 1px rgb(62, 44, 100, 0.6);
+    border-radius: 20px;
+    margin: 30px;
+}
+
+.footer {
+    background-color: #f1f1f1;
+}
+
+.footer .container a:hover {
+    color: orange !important;
+}
+
+.footer .container .col-sm-12 {
+    padding: 0;
+}
+
+.footer .container a {
+    font-size: 18px;
+}
+
+.footer .container h4 {
+    font-size: 20px;
+}
+
+.footer .container .texticonfooter span {
+    font-size: 18px;
+}
+
+.footer .container .iconfooter {
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+/* END Footer */

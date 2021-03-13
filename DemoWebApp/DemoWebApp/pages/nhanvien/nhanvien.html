@@ -1,0 +1,190 @@
+<!--  link hình ảnh -->
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiểm tra Bootstrap (Trang chủ)</title>
+  <!-- Import Bootstrap css, js, font awesome here -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- File css + js of you -->
+  <script src="./nhanvien.min.js"></script>
+  <link rel="stylesheet" href="./nhanvien.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+  <!-- Font-family: Gamja Flower -->
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="logo d-none d-md-block mb-1">
+    <div class="">
+      <div class="d-flex justify-content-center">
+        <a href="#" class="m-0 p-0">
+          <img src="multi/logo/Logo-01.jpg" class="image-fluid" />
+        </a>
+      </div>
+      <div class="d-flex align-self-end justify-content-center">
+        <a href="#" class="mr-3">
+          Thái Huỳnh Đức
+        </a>
+        <a href="#" class="mr-4 mb-1 logout">
+          Đăng xuất
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="connect-content">
+    <ul class="nav nav-tabs nav-justified">
+      <li class="nav-item">
+        <a href="#tab1" class="tit nav-link active" data-toggle="tab"><span>Hồ sơ sách</span></a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab2" class="tit nav-link" data-toggle="tab"><span>Quá trình giao dịch</span></a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab3" class="tit nav-link" data-toggle="tab"><span>Báo cáo</span></a>
+      </li>
+    </ul>
+    <div class="tab-content w-100">
+      <div class="w-100 h-25 tab-pane active" id="tab1">
+        <div class="container p-0">
+          <table>
+            <tr>
+              <th>Mã Sách</th>
+              <th>Tên Sách</th>
+              <th>Tên Tác Giả</th>
+              <th>Giá bán</th>
+              <th>Ngày XB</th>
+              <th>Mã TL</th>
+            </tr>
+            <tr>
+              <td>S001</td>
+              <td>Thanh gươm diệt quỷ</td>
+              <td>Maria Ozawa</td>
+              <td>100000</td>
+              <td>18/02/2020</td>
+              <td>TTR001</td>
+            </tr>
+            <tr>
+              <td>S002</td>
+              <td>Tấu hài đêm phia</td>
+              <td>Thầy giáo Ba</td>
+              <td>400000</td>
+              <td>20/04/2019</td>
+              <td>TTH001</td>
+            </tr>
+            <tr>
+              <td>S003</td>
+              <td>Đắc nhân tâm</td>
+              <td>Dale Carnegie</td>
+              <td>200000</td>
+              <td>25/07/2015</td>
+              <td>SHP001</td>
+            </tr>
+          </table>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <button type="button" class="btn mr-5" data-toggle="modal" data-target="#send">Thêm
+          </button><div id="send" class="modal">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content text-center">
+                <div class="modal-header"></div>
+                <div class="modal-content">
+                  
+                </div>
+                <div class="modal-footer"></div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn ml-5">Xóa</button>
+          <button type="button" class="btn ml-5">Cập nhập</button>
+        </div>
+      </div>
+      <div class="w-100 h-25 tab-pane" id="tab2">
+        <div class="container p-0">
+          <table>
+            <tr>
+              <th>Mã Sách</th>
+              <th>Giá bán</th>
+              <th>Ngày bán</th>
+              <th>Khuyễn mãi</th>
+            </tr>
+            <tr>
+              <td>S001</td>
+              <td>100000</td>
+              <td>15/08/2020</td>
+              <td>10%</td>
+            </tr>
+            <tr>
+              <td>S002</td>
+              <td>400000</td>
+              <td>20/05/2020</td>
+              <td>8%</td>
+            </tr>
+            <tr>
+              <td>S003</td>
+              <td>200000</td>
+              <td>25/07/2020</td>
+              <td>20%</td>
+            </tr>
+          </table>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <button type="button" class="btn mr-5">Xem sách giao dịch</button>
+          <button type="button" class="btn ml-5">Nhập khuyến mãi</button>
+        </div>
+      </div>
+      <div class="w-100 h-25 tab-pane" id="tab3">
+        <div class="container p-0">
+          <table>
+            <tr>
+              <th>Mã Sách</th>
+              <th>Số lượng xuất</th>
+              <th>Số lượng tồn</th>
+              <th>Ngày bán</th>
+              <th>Tổng tiền bán</th>
+            </tr>
+            <tr>
+              <td>S001</td>
+              <td>10</td>
+              <td>50</td>
+              <td>10/12/2020</td>
+              <td>1000000</td>
+            </tr>
+            <tr>
+              <td>S002</td>
+              <td>16</td>
+              <td>85</td>
+              <td>10/12/2020</td>
+              <td>6400000</td>
+            </tr>
+            <tr>
+              <td>S003</td>
+              <td>25</td>
+              <td>23</td>
+              <td>10/12/2020</td>
+              <td>5000000</td>  
+            </tr>
+          </table>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <button type="button" class="btn ml-5">Tạo</button>
+          <button type="button" class="btn ml-5">Nhập</button>
+          <button type="button" class="btn ml-5">Xem</button>
+          <button type="button" class="btn ml-5">Xuất</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

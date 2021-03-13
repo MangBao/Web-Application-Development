@@ -1,0 +1,28 @@
+body {
+    font-family: 'Galada', cursive;
+    font-size: 20px;
+}
+a:hover{
+    text-decoration: none;
+}
+.manipulation{
+    margin: 0 auto;
+    width: 1140px;
+    height: 500px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

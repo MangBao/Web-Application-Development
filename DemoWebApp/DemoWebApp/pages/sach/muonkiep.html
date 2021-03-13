@@ -1,0 +1,391 @@
+<!--  link hình ảnh -->
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muôn kiếp</title>
+    <!-- Import Bootstrap css, js, font awesome here -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- File css + js of you -->
+    <script src="./muonkiep.js"></script>
+    <link rel="stylesheet" href="./muonkiep.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+    <!-- Font-family: Gamja Flower -->
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <script>
+        function openWin() {
+            window.open("../thanhtoan/thanhtoan.html");
+        }
+    </script>
+</head>
+
+<body>
+    <!-- http://placehold.jp/1090x400.png -->
+    <!-- Bag -->
+    <div class="bag">
+        <i class="fas fa-shopping-bag"></i>
+    </div>
+    <!-- END Bag -->
+    <!-- Logo -->
+    <div class="logo d-none d-md-block mb-1">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex">
+                <a href="#" class="m-0 p-0">
+                    <img src="multi/logo/Logo-01.jpg" class="image-fluid" />
+                </a>
+                <div class="infobook ml-2">
+                    <p class="mt-2 mb-1">
+                        <span class="fa fa-phone mr-2 "></span>
+                        <span>0928.979.688</span>
+                    </p>
+                    <p class="my-0">
+                        <span class="fa fa-envelope mr-2 "></span>
+                        <span>nhasachphuongnam@phuongnam.vn</span>
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex align-self-end">
+                <a href="#" class="mr-3 blocklgin" data-toggle="modal" data-target="#login">
+                    <span class="fas fa-sign-in-alt"></span> Đăng nhập
+                </a>
+                <div class="modal" id="login">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Đăng nhập</h4>
+                                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row my-2 p-0 m-0">
+                                    <h5 class="col-4 p-0 mb-2 text-right">Tên đăng nhập:</h5>
+                                    <input type="text" class="txtlg col-7 mb-2" placeholder="Nhập tên đăng nhập">
+                                    <h5 class="col-4 p-0 m-0  text-right">Mật khẩu:</h5>
+                                    <input type="password" class="txtpw col-7" placeholder="Nhập mật khẩu">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="float-right">Quên mật khẩu</a>
+                                <button class="btn btn-warning btnlgin" type="button">Đăng nhập</button>
+                                <button class="btn btn-danger" type="button" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="mr-4 mb-1 blocksgup" data-toggle="modal" data-target="#signup">
+                    <span class="fas fa-user-plus"></span> Đăng ký
+                </a>
+                <div class="modal" id="signup">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Đăng ký</h4>
+                                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body row">
+                                <h5 class="col-4 p-0 mb-2 text-right">Tên tài khoản:</h5>
+                                <input type="text" class="txtlg col-7 mb-2" placeholder="Nhập tên tài khoản">
+                                <h5 class="col-4 p-0 m-0 mb-2 text-right">Mật khẩu:</h5>
+                                <input type="password" class="col-7 mb-2" placeholder="Nhập mật khẩu">
+                                <h5 class="col-4 p-0 m-0 mb-2 text-right">Xác nhận mật khẩu:</h5>
+                                <input type="password" class="col-7 mb-2" placeholder="Nhập lại mật khẩu">
+                                <h5 class="col-4 p-0 m-0 mb-2 text-right">Mail:</h5>
+                                <input type="password" class="col-7 mb-2" placeholder="Nhập mail">
+                                <h5 class="col-4 p-0 m-0 mb-2 text-right">Số điện thoại:</h5>
+                                <input type="password" class="col-7 mb-2" placeholder="Nhập số điện thoại">
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-warning" type="button">Xác nhận đăng ký</button>
+                                <button class="btn btn-danger" type="button" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Logo -->
+
+    <!-- Menubar -->
+    <div class="containermenubar">
+        <nav class="menu navbar navbar-expand-md navbar-light d-flex border-0 sticky-top p-0" id="menu">
+            <div class="navbar-toggler w-100 border-0 p-0 text-center">
+                <button class="navbar-toggler mb-1 float-left" data-toggle="collapse" data-target="#area1">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                <button class="navbar-toggler float-right" data-toggle="collapse" data-target="#area2">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            </div>
+            <div class="collapse navbar-collapse" id="area1" data-parent="#menu">
+                <ul class="navbar-nav">
+                    <li class="navbar-item">
+                        <a href="../../trangchu.html" class="nav-link"><span class="fa fa-home"></span>Trang chủ</a>
+                    </li>
+                    <li class="navbar-item dropdown d-flex">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Thể loại</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-header text-decoration-none py-0">Văn học</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Văn học đương đại</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Văn học cận đại</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Văn học thế giới</a>
+                            <p class="dropdown-divider"></p>
+                            <a href="#" class="dropdown-header text-decoration-none py-0">Kinh tế</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Kinh tế thương mại</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Kinh tế nông nghiệp</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Kinh tế taì chính</a>
+                            <p class="dropdown-divider"></p>
+                            <a href="#" class="dropdown-header text-decoration-none py-0">Kỹ năng sống</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Kỹ năng sống ở rừng</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Kỹ năng sống ở đảo</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Kỹ năng sống ở sa mạc</a>
+                            <p class="dropdown-divider"></p>
+                            <a href="#" class="dropdown-header text-decoration-none py-0 text-dark">Khoa học - kỹ thuật</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Trí tuệ nhân tạo</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Khoa học máy tính</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Kỹ thuật nhiệt máy</a>
+                            <p class="dropdown-divider"></p>
+                            <a href="#" class="dropdown-header text-decoration-none py-0 text-dark">Lịch sử</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Lịch sử thế giới</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Lịch sử nước ta</a>
+                            <a href="#" class="dropdown-item p-0 pl-2">Lịch sử vũ trụ</a>
+                        </div>
+                    </li>
+                    <li class="navbar-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Liên hệ</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Tư vấn</a>
+                            <p class="dropdown-divider"></p>
+                            <a href="#" class="dropdown-item">Văn phòng</a>
+                            <p class="dropdown-divider"></p>
+                            <a href="#" class="dropdown-item">Đ/c các nhà sách</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse text-right justify-content-end" id="area2" data-parent="#menu">
+                <form class="form-inline my-1 w-100">
+                    <div class="input-group w-100">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-success" type="submit">
+                  <span class="fas fa-search"></span>
+                </button>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Tìm kiếm sách (gõ tên tác giả/ tên sách)" />
+                    </div>
+                </form>
+                <ul class="navbar-nav mr-2 d-md-none">
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">
+                            <span class="fas fa-sign-in-alt"></span> Đăng nhập
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">
+                            <span class="fas fa-user-plus"></span> Đăng ký
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+    </div>
+    <!-- END Menubar -->
+
+    <!-- Content -->
+    <div class="container">
+        <div class="productss">
+            <hr class="hr3 mx-auto mt-2" />
+            <div class="d-flex mb-4">
+                <div class="col-3">
+                    <div class="card">
+                        <img class="card-img-top" src="multi/books/4.jpg">
+                        <div class="card-body">
+                            <p class="text-center">Muôn kiếp thiên sinh</p>
+                        </div>
+                        <div class="card-footer btnsell bg-white p-0 d-flex">
+                            <button type="button" class="btn add" data-toggle="modal" data-target="#check">Thêm vào giỏ hàng</button>
+                            <div id="check" class="modal">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content text-center">
+                                        <div class="modal-header"></div>
+                                        <div class="modal-content">
+                                            <h4>Đã thêm thành công</h4>
+                                        </div>
+                                        <div class="modal-footer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn sell" onclick="openWin()">Mua ngay</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="info col-9">
+                    <div class="info_items">
+                        <div class="info_item row">
+                            <div class="name col-5">
+                                <p>Mã hàng</p>
+                            </div>
+                            <div class="contain col-5">
+                                <p>8935275100099</p>
+                            </div>
+                        </div>
+                        <div class="info_item row">
+                            <div class="name col-5">
+                                <p>Tên Nhà Cung Cấp</p>
+                            </div>
+                            <div class="contain col-5">
+                                <p><a href="#">Hải Đăng</a></p>
+                            </div>
+                        </div>
+                        <div class="info_item row">
+                            <div class="name col-5">
+                                <p>Tác giả</p>
+                            </div>
+                            <div class="contain col-5">
+                                <p>Giáo sư Randy Pausch</p>
+                            </div>
+                        </div>
+                        <div class="info_item row">
+                            <div class="name col-5">
+                                <p>Người Dịch</p>
+                            </div>
+                            <div class="contain col-5">
+                                <p>Vũ Duy Mẫn</p>
+                            </div>
+                        </div>
+                        <div class="info_item row">
+                            <div class="name col-5">
+                                <p>NXB</p>
+                            </div>
+                            <div class="contain col-5">
+                                <p>NXB Lao Động</p>
+                            </div>
+                        </div>
+                        <div class="info_item row">
+                            <div class="name col-5">
+                                <p>Hình thức</p>
+                            </div>
+                            <div class="contain col-5">
+                                <p>Bìa Mềm (14 x 20) 316gr</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="decription">
+            “Muôn kiếp nhân sinh” là tác phẩm do Giáo sư John Vũ - Nguyên Phong viết từ năm 2017 và hoàn tất đầu năm 2020 ghi lại những câu chuyện, trải nghiệm tiền kiếp kỳ lạ từ nhiều kiếp sống của người bạn tâm giao lâu năm, ông Thomas – một nhà kinh doanh tài
+            chính nổi tiếng ở New York. Những câu chuyện chưa từng tiết lộ này sẽ giúp mọi người trên thế giới chiêm nghiệm, khám phá các quy luật về luật Nhân quả và Luân hồi của vũ trụ giữa lúc trái đất đang gặp nhiều tai ương, biến động, khủng hoảng
+            từng ngày. “Muôn kiếp nhân sinh” là một bức tranh lớn với vô vàn mảnh ghép cuộc đời, là một cuốn phim đồ sộ, sống động về những kiếp sống huyền bí, trải dài từ nền văn minh Atlantis hùng mạnh đến vương quốc Ai Cập cổ đại của các Pharaoh quyền
+            uy, đến Hợp Chủng Quốc Hoa Kỳ ngày nay. “Muôn kiếp nhân sinh” cung cấp cho bạn đọc kiến thức mới mẻ, vô tận của nhân loại lần đầu được hé mở, cùng những phân tích uyên bác, tiên đoán bất ngờ về hiện tại và tương lai thế giới của những bậc
+            hiền triết thông thái. Đời người tưởng chừng rất dài nhưng lại trôi qua rất nhanh, sinh vượng suy tử, mong manh như sóng nước. Luật nhân quả cực kỳ chính xác, chi tiết, phức tạp được thu thập qua nhiều đời, nhiều kiếp, liên hệ tương hỗ đan
+            xen chặt chữ lẫn nhau, không ai có thể tính được tích đức này có thể trừ được nghiệp kia không, không ai có thể biết được khi nào nhân sẽ trổ quả. Nhưng, một khi đã gây ra nhân thì chắc chắn sẽ gặt quả - luật Nhân quả của vũ trụ trước giờ
+            không bao giờ sai. Luật Luân hồi và Nhân quả đã tạo nhân duyên để người này gặp người kia. Gặp nhau có khi là duyên, có khi là nợ; gặp nhau có lúc để trả nợ, có lúc để nối lại duyên xưa. Có biết bao việc diễn ra trong đời, tưởng chừng như
+            là ngẫu nhiên nhưng thật ra đã được sắp đặt từ trước. Luân hồi là một ngôi trường rộng lớn, nơi tất cả con người, tất cả sinh vật đều phải học bài học của riêng mình cho đến khi thật hoàn thiện mới thôi. Nếu không chịu học hay chưa học được
+            trọn vẹn thì buộc phải học lại, chính xác theo quy luật của Nhân quả. Thomas đã chia sẻ vì sao đã kể những câu chuyện riêng tư huyền bí này với Giáo sư John Vũ để thực hiện tác phẩm “Muôn kiếp nhân sinh”: “Hiện nay thế giới đang trải qua giai
+            đoạn hỗn loạn, xáo trộn, mà thật ra thì mọi quốc gia đều đang gánh chịu những nghiệp quả mà họ đã gây ra trong quá khứ. Mỗi quốc gia, cũng như mọi cá nhân, đều có những nghiệp quả riêng do những nhân mà họ đã gây ra. Cá nhân thì có ‘biệt nghiệp‘
+            riêng của từng người, nhưng quốc gia thì có ‘cộng nghiệp‘ mà tất cả những người sống trong đó đều phải trả. Thường thì con người, khi hành động, ít ai nghĩ đến hậu quả, nhưng một khi hậu quả xảy đến thì họ nghĩ gì, làm gì? Họ oán hận, trách
+            trời, trách đất, trách những người chung quanh đã gây ra những hậu quả đó? Có mấy ai biết chiêm nghiệm, tự trách mình và thay đổi không? Tôi mong chúng ta - những cánh bướm bé nhỏ rung động mong manh cũng có thể tạo nên những trận cuồng phong
+            mãnh liệt để thức tỉnh mọi người. Tương lai của mỗi con người, mỗi tổ chức, mỗi quốc gia và cả hành tinh này sẽ ra sao trong giai đoạn sắp tới là tùy thuộc vào thái độ ứng xử, nhìn nhận và thức tỉnh của từng cá nhân, từng tổ chức, từng quốc
+            gia đó tạo nên. Nếu muốn thay đổi, cần khởi đầu bằng việc nhận thức, chuyển đổi tâm thức, lan tỏa yêu thương và chia sẻ sự hiểu biết từ mỗi người chúng ta trước. Nhân quả đừng đợi thấy mới tin. Nhân quả là bảng chỉ đường, giúp con người tìm
+            về thiện lương“ “Muôn kiếp nhân sinh” có hai khổ, bìa mềm khổ 14cmx 20.5cm, bìa cứng khổ 16x24cm ruột giấy Ford kem Nhật Bản 80 gsm, in 3 màu kèm 16 phụ bản màu. Cuốn sách được xuất bản bằng tiếng Việt trước khi được chuyển nhượng bản quyền
+            cho các quốc gia khác trên thế giới. Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Tuy nhiên tuỳ vào từng loại sản phẩm hoặc phương thức, địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng
+            cồng kềnh, ...
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <hr class="hr6 mx-auto mb-2" />
+    <div class="footer">
+        <div class="footer pt-2 mt-4">
+            <div class="container mx-auto row text-center text-md-left">
+                <div class="col-sm-12 col-md-3">
+                    <h4 class="text-dark">Về chúng tôi</h4>
+                    <ul style="list-style-type: none;" class="p-0">
+                        <li>
+                            <a class="text-decoration-none text-black-50" href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-black-50" href="">Nhân viên tư vấn</a>
+                        </li>
+                        <li class="mt-3">
+                            <img src="multi/footer/giayphep.webp" />
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <h4 class="text-dark">Thông tin</h4>
+                    <ul style="list-style-type: none;" class="p-0">
+                        <li>
+                            <a href="" class="text-decoration-none text-black-50">Thanh toán và bảo mật</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-decoration-none text-black-50">Giao hàng miễn phí</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-decoration-none text-black-50">Điều khoản sử dụng</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-decoration-none text-black-50">Chính sách ưu đãi</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <h4 class="text-dark">Tư vấn</h4>
+                    <ul style="list-style-type: none;" class="p-0">
+
+                        <li>
+                            <a href="" class="text-decoration-none text-black-50">Trao đổi, giao dich</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-decoration-none text-black-50">Văn phòng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-4 pl-4">
+                    <h4 class="text-dark mb-0">Liên hệ qua</h4>
+                    <ul style="list-style-type: none;" class="p-0 mt-2">
+                        <li>
+                            <span class="fab fa-facebook text-primary mb-2 iconfooter"></span><a href="#" class="text-decoration-none mt-2 iconfooter">
+                https://www.facebook.com/phuongnambook
+              </a>
+                        </li>
+                        <li>
+                            <span class="fab fa-twitter text-primary mb-2 iconfooter"></span><a href="#" class="text-decoration-none mt-2 iconfooter">
+                https://www.twitter.com/phuongnambook
+              </a>
+                        </li>
+                        <li>
+                            <span class="fab fa-youtube text-danger mb-2 iconfooter"></span><a href="#" class="text-decoration-none mt-2 iconfooter">
+                https://www.youtube.com/phuongnambook
+              </a>
+                        </li>
+                        <li>
+                            <p class="mt-1 mb-1">
+                                <span class="fa fa-phone mr-2"></span>0928.979.688
+                            </p>
+                            <p class="my-0">
+                                <span class="fa fa-envelope mr-2"></span>nhasachphuongnam@phuongnam.vn
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Footer -->
+</body>
+
+</html>

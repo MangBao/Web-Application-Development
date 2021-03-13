@@ -1,0 +1,198 @@
+<!--  link hình ảnh -->
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiểm tra Bootstrap (Trang chủ)</title>
+  <!-- Import Bootstrap css, js, font awesome here -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- File css + js of you -->
+  <script src="./quantri.min.js"></script>
+  <link rel="stylesheet" href="./quantri.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+  <!-- Font-family: Gamja Flower -->
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="logo d-none d-md-block mb-1">
+    <div class="">
+      <div class="d-flex justify-content-center">
+        <a href="#" class="m-0 p-0">
+          <img src="multi/logo/Logo-01.jpg" class="image-fluid" />
+        </a>
+      </div>
+      <div class="d-flex align-self-end justify-content-center">
+        <a href="#" class="mr-3">
+          Admin
+        </a>
+        <a href="#" class="mr-4 mb-1 logout">
+          Đăng xuất
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="connect-content">
+    <ul class="nav nav-tabs nav-justified">
+      <li class="nav-item">
+        <a href="#tab1" class="tit nav-link active" data-toggle="tab"><span>Hồ sơ khách hàng</span></a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab2" class="tit nav-link" data-toggle="tab"><span>Hồ sơ nhân viên</span></a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab3" class="tit nav-link" data-toggle="tab"><span>Xem Báo cáo</span></a>
+      </li>
+    </ul>
+    <div class="tab-content w-100">
+      <div class="w-100 h-25 tab-pane active" id="tab1">
+        <div class="container p-0">
+          <table>
+            <tr>
+              <th>Mã KH</th>
+              <th>Họ Tên</th>
+              <th>Địa Chỉ</th>
+              <th>SĐT</th>
+              <th>Email</th>
+            </tr>
+            <tr>
+              <td>KH001</td>
+              <td>Mang Bảo</td>
+              <td>20/2 Phạm Ngũ Lão - TP.Nha Trang</td>
+              <td>0372970774</td>
+              <td>mangbao@gmail.com</td>
+            </tr>
+            <tr>
+              <td>KH002</td>
+              <td>Lê Minh Long</td>
+              <td>30/55 Củ Chi - TP.HCM</td>
+              <td>0857416923</td>
+              <td>minhlongle@gmail.com</td>
+            </tr>
+            <tr>
+              <td>KH003</td>
+              <td>Nguyễn Võ Tiền</td>
+              <td>35/8 Võ Nguyên Giáp - TP.Nha Trang</td>
+              <td>0501748562</td>
+              <td>votiennguyen@gmail.com</td>
+            </tr>
+          </table>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <button type="button" class="btn mr-5" data-toggle="modal" data-target="#send">Thêm
+          </button><div id="send" class="modal">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content text-center">
+                <div class="modal-header"></div>
+                <div class="modal-content">
+                  
+                </div>
+                <div class="modal-footer"></div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn ml-5">Xóa</button>
+          <button type="button" class="btn ml-5">Cập nhập</button>
+        </div>
+      </div>
+      <div class="w-100 h-25 tab-pane" id="tab2">
+        <div class="container p-0">
+          <table>
+            <tr>
+              <th>Mã NV</th>
+              <th>Họ Tên</th>
+              <th>Địa Chỉ</th>
+              <th>SĐT</th>
+              <th>Email</th>
+            </tr>
+            <tr>
+              <td>NV001</td>
+              <td>Huỳnh Hiểu Minh</td>
+              <td>123EA Chung Cư Agenla - TP.Cần Thơ</td>
+              <td>0123465998</td>
+              <td>huynhminhieu@gmail.com</td>
+            </tr>
+            <tr>
+              <td>NV002</td>
+              <td>Lý Mạc Sầu</td>
+              <td>25/3KA Cao Văn Bé - TP.Cam Ranh</td>
+              <td>0589412316</td>
+              <td>macsauly@gmail.com</td>
+            </tr>
+            <tr>
+              <td>NV003</td>
+              <td>Trương Vô Kỵ</td>
+              <td>147T Phố Hàng Đẫy - TP. Hà Nội</td>
+              <td>0789865213</td>
+              <td>trvoky@gmail.com</td>
+            </tr>
+          </table>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <div class="d-flex justify-content-center mt-3">
+            <button type="button" class="btn mr-5" data-toggle="modal" data-target="#send">Thêm
+            </button><div id="send" class="modal">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content text-center">
+                  <div class="modal-header"></div>
+                  <div class="modal-content">
+                    
+                  </div>
+                  <div class="modal-footer"></div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn ml-5">Xóa</button>
+            <button type="button" class="btn ml-5">Cập nhập</button>
+          </div>
+        </div>
+      </div>
+      <div class="w-100 h-25 tab-pane" id="tab3">
+        <div class="container p-0">
+          <table>
+            <tr>
+              <th>Mã Sách</th>
+              <th>Số lượng xuất</th>
+              <th>Số lượng tồn</th>
+              <th>Ngày bán</th>
+              <th>Tổng tiền bán</th>
+            </tr>
+            <tr>
+              <td>S001</td>
+              <td>10</td>
+              <td>50</td>
+              <td>10/12/2020</td>
+              <td>1000000</td>
+            </tr>
+            <tr>
+              <td>S002</td>
+              <td>16</td>
+              <td>85</td>
+              <td>10/12/2020</td>
+              <td>6400000</td>
+            </tr>
+            <tr>
+              <td>S003</td>
+              <td>25</td>
+              <td>23</td>
+              <td>10/12/2020</td>
+              <td>5000000</td>  
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
