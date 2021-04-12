@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Confirm";
+    Layout = "~/Views/Shared/_HomePage.cshtml";
+}
+
+<div class="container">
+    <h1 class="text-center">Thông tin thành viên đã đăng ký</h1>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 well well-sm col-md-offset-4" style="margin-left: 28%; width: 44%">
+            <form name="f1" action="/Index/Dangky" method="post" style="display: flex">
+
+                <img style="width: 200px; height: 200px; border-radius: 100px; align-self: center; display: flex; margin: auto;" src="@ViewBag.Avatar" />
+                <div style=" margin-left: 10px; width: 349px;">
+                    <label class="form-control">Mã số nhân viên: @ViewBag.EmpID</label>
+                    <label class="form-control">Họ tên: @ViewBag.Name</label>
+                    <label class="form-control">Ngày sinh: @ViewBag.BirthOfDate</label>
+                    <label class="form-control" for="">Email: @ViewBag.Email</label>
+                    <label class="form-control" for=""> Mật khẩu: @ViewBag.Password</label>
+                    <label class="form-control" for="">Đơn vị: @ViewBag.Department</label>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Quay lại</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLBSACHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ChiTietHDS">
+    <Key>
+      <PropertyRef Name="MaHDS" />
+    </Key>
+    <Property Name="MaHDS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaSach" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SoLuongSach" Type="Int32" Nullable="false" />
+    <Property Name="GiaBanS" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="Sach" Relationship="Self.FK__ChiTietHD__MaSac__4316F928" FromRole="ChiTietHDS" ToRole="Sach" />
+    <NavigationProperty Name="HoaDon" Relationship="Self.FK__HoaDon__MaHDS__45F365D3" FromRole="ChiTietHDS" ToRole="HoaDon" />
+  </EntityType>
+  <EntityType Name="ChiTietPNS">
+    <Key>
+      <PropertyRef Name="SoCTPNS" />
+    </Key>
+    <Property Name="SoCTPNS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SoLuongNhapS" Type="Int32" Nullable="false" />
+    <Property Name="GiaNhapS" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="MaSach" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Sach" Relationship="Self.FK__ChiTietPN__MaSac__4E88ABD4" FromRole="ChiTietPNS" ToRole="Sach" />
+    <NavigationProperty Name="PhieuNhap" Relationship="Self.FK__PhieuNhap__SoCTP__5165187F" FromRole="ChiTietPNS" ToRole="PhieuNhap" />
+  </EntityType>
+  <EntityType Name="HoaDon">
+    <Key>
+      <PropertyRef Name="SoHD" />
+    </Key>
+    <Property Name="SoHD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaHDS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NgayBan" Type="DateTime" Precision="0" />
+    <Property Name="MaKH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ChiTietHDS" Relationship="Self.FK__HoaDon__MaHDS__45F365D3" FromRole="HoaDon" ToRole="ChiTietHDS" />
+    <NavigationProperty Name="KhachHang" Relationship="Self.FK__HoaDon__MaKH__46E78A0C" FromRole="HoaDon" ToRole="KhachHang" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GioiTinh" Type="Boolean" Nullable="false" />
+    <Property Name="DiaChiKH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DienThoaiKH" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="HoaDon" Relationship="Self.FK__HoaDon__MaKH__46E78A0C" FromRole="KhachHang" ToRole="HoaDon" />
+  </EntityType>
+  <EntityType Name="NhaCungCap">
+    <Key>
+      <PropertyRef Name="MaNCC" />
+    </Key>
+    <Property Name="MaNCC" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenNCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiaChiNCC" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SDTNCC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaNXB" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="NhaXuatBan" Relationship="Self.FK__NhaCungCa__MaNXB__4BAC3F29" FromRole="NhaCungCap" ToRole="NhaXuatBan" />
+    <NavigationProperty Name="PhieuNhap" Relationship="Self.FK__PhieuNhap__MaNCC__52593CB8" FromRole="NhaCungCap" ToRole="PhieuNhap" />
+  </EntityType>
+  <EntityType Name="NhaXuatBan">
+    <Key>
+      <PropertyRef Name="MaNXB" />
+    </Key>
+    <Property Name="MaNXB" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenNXB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiaChiNXB" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DienThoai" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="NhaCungCap" Relationship="Self.FK__NhaCungCa__MaNXB__4BAC3F29" FromRole="NhaXuatBan" ToRole="NhaCungCap" />
+  </EntityType>
+  <EntityType Name="PhieuNhap">
+    <Key>
+      <PropertyRef Name="SoPN" />
+    </Key>
+    <Property Name="SoPN" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SoCTPNS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NgayNhap" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MaNCC" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ChiTietPNS" Relationship="Self.FK__PhieuNhap__SoCTP__5165187F" FromRole="PhieuNhap" ToRole="ChiTietPNS" />
+    <NavigationProperty Name="NhaCungCap" Relationship="Self.FK__PhieuNhap__MaNCC__52593CB8" FromRole="PhieuNhap" ToRole="NhaCungCap" />
+  </EntityType>
+  <EntityType Name="Sach">
+    <Key>
+      <PropertyRef Name="MaSach" />
+    </Key>
+    <Property Name="MaSach" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenSach" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenTG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgayXB" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MaTL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ChiTietHDS" Relationship="Self.FK__ChiTietHD__MaSac__4316F928" FromRole="Sach" ToRole="ChiTietHDS" />
+    <NavigationProperty Name="ChiTietPNS" Relationship="Self.FK__ChiTietPN__MaSac__4E88ABD4" FromRole="Sach" ToRole="ChiTietPNS" />
+    <NavigationProperty Name="TheLoai" Relationship="Self.FK__Sach__MaTL__3A81B327" FromRole="Sach" ToRole="TheLoai" />
+    <NavigationProperty Name="TacGia" Relationship="Self.Sach_TG" FromRole="Sach" ToRole="TacGia" />
+  </EntityType>
+  <EntityType Name="TacGia">
+    <Key>
+      <PropertyRef Name="MaTG" />
+    </Key>
+    <Property Name="MaTG" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenTG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiaChiTG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Sach" Relationship="Self.Sach_TG" FromRole="TacGia" ToRole="Sach" />
+  </EntityType>
+  <EntityType Name="TheLoai">
+    <Key>
+      <PropertyRef Name="MaTL" />
+    </Key>
+    <Property Name="MaTL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenTL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Sach" Relationship="Self.FK__Sach__MaTL__3A81B327" FromRole="TheLoai" ToRole="Sach" />
+  </EntityType>
+  <Association Name="FK__ChiTietHD__MaSac__4316F928">
+    <End Role="Sach" Type="Self.Sach" Multiplicity="1" />
+    <End Role="ChiTietHDS" Type="Self.ChiTietHDS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sach">
+        <PropertyRef Name="MaSach" />
+      </Principal>
+      <Dependent Role="ChiTietHDS">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HoaDon__MaHDS__45F365D3">
+    <End Role="ChiTietHDS" Type="Self.ChiTietHDS" Multiplicity="1" />
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChiTietHDS">
+        <PropertyRef Name="MaHDS" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="MaHDS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietPN__MaSac__4E88ABD4">
+    <End Role="Sach" Type="Self.Sach" Multiplicity="1" />
+    <End Role="ChiTietPNS" Type="Self.ChiTietPNS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sach">
+        <PropertyRef Name="MaSach" />
+      </Principal>
+      <Dependent Role="ChiTietPNS">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhieuNhap__SoCTP__5165187F">
+    <End Role="ChiTietPNS" Type="Self.ChiTietPNS" Multiplicity="1" />
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChiTietPNS">
+        <PropertyRef Name="SoCTPNS" />
+      </Principal>
+      <Dependent Role="PhieuNhap">
+        <PropertyRef Name="SoCTPNS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HoaDon__MaKH__46E78A0C">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NhaCungCa__MaNXB__4BAC3F29">
+    <End Role="NhaXuatBan" Type="Self.NhaXuatBan" Multiplicity="1" />
+    <End Role="NhaCungCap" Type="Self.NhaCungCap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaXuatBan">
+        <PropertyRef Name="MaNXB" />
+      </Principal>
+      <Dependent Role="NhaCungCap">
+        <PropertyRef Name="MaNXB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhieuNhap__MaNCC__52593CB8">
+    <End Role="NhaCungCap" Type="Self.NhaCungCap" Multiplicity="1" />
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaCungCap">
+        <PropertyRef Name="MaNCC" />
+      </Principal>
+      <Dependent Role="PhieuNhap">
+        <PropertyRef Name="MaNCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sach__MaTL__3A81B327">
+    <End Role="TheLoai" Type="Self.TheLoai" Multiplicity="1" />
+    <End Role="Sach" Type="Self.Sach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TheLoai">
+        <PropertyRef Name="MaTL" />
+      </Principal>
+      <Dependent Role="Sach">
+        <PropertyRef Name="MaTL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Sach_TG">
+    <End Role="Sach" Type="Self.Sach" Multiplicity="*" />
+    <End Role="TacGia" Type="Self.TacGia" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="QLBSACHEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ChiTietHDS" EntityType="Self.ChiTietHDS" />
+    <EntitySet Name="ChiTietPNS" EntityType="Self.ChiTietPNS" />
+    <EntitySet Name="HoaDon" EntityType="Self.HoaDon" />
+    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" />
+    <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" />
+    <EntitySet Name="NhaXuatBan" EntityType="Self.NhaXuatBan" />
+    <EntitySet Name="PhieuNhap" EntityType="Self.PhieuNhap" />
+    <EntitySet Name="Sach" EntityType="Self.Sach" />
+    <EntitySet Name="TacGia" EntityType="Self.TacGia" />
+    <EntitySet Name="TheLoai" EntityType="Self.TheLoai" />
+    <AssociationSet Name="FK__ChiTietHD__MaSac__4316F928" Association="Self.FK__ChiTietHD__MaSac__4316F928">
+      <End Role="Sach" EntitySet="Sach" />
+      <End Role="ChiTietHDS" EntitySet="ChiTietHDS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HoaDon__MaHDS__45F365D3" Association="Self.FK__HoaDon__MaHDS__45F365D3">
+      <End Role="ChiTietHDS" EntitySet="ChiTietHDS" />
+      <End Role="HoaDon" EntitySet="HoaDon" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietPN__MaSac__4E88ABD4" Association="Self.FK__ChiTietPN__MaSac__4E88ABD4">
+      <End Role="Sach" EntitySet="Sach" />
+      <End Role="ChiTietPNS" EntitySet="ChiTietPNS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuNhap__SoCTP__5165187F" Association="Self.FK__PhieuNhap__SoCTP__5165187F">
+      <End Role="ChiTietPNS" EntitySet="ChiTietPNS" />
+      <End Role="PhieuNhap" EntitySet="PhieuNhap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HoaDon__MaKH__46E78A0C" Association="Self.FK__HoaDon__MaKH__46E78A0C">
+      <End Role="KhachHang" EntitySet="KhachHang" />
+      <End Role="HoaDon" EntitySet="HoaDon" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NhaCungCa__MaNXB__4BAC3F29" Association="Self.FK__NhaCungCa__MaNXB__4BAC3F29">
+      <End Role="NhaXuatBan" EntitySet="NhaXuatBan" />
+      <End Role="NhaCungCap" EntitySet="NhaCungCap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuNhap__MaNCC__52593CB8" Association="Self.FK__PhieuNhap__MaNCC__52593CB8">
+      <End Role="NhaCungCap" EntitySet="NhaCungCap" />
+      <End Role="PhieuNhap" EntitySet="PhieuNhap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sach__MaTL__3A81B327" Association="Self.FK__Sach__MaTL__3A81B327">
+      <End Role="TheLoai" EntitySet="TheLoai" />
+      <End Role="Sach" EntitySet="Sach" />
+    </AssociationSet>
+    <AssociationSet Name="Sach_TG" Association="Self.Sach_TG">
+      <End Role="Sach" EntitySet="Sach" />
+      <End Role="TacGia" EntitySet="TacGia" />
+    </AssociationSet>
+    <FunctionImport Name="pr_TIM_KIEM" ReturnType="Collection(String)">
+      <Parameter Name="TenTL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pr_THEM_SACH">
+      <Parameter Name="MaSach" Mode="In" Type="String" />
+      <Parameter Name="TenSach" Mode="In" Type="String" />
+      <Parameter Name="TenTG" Mode="In" Type="String" />
+      <Parameter Name="NgayXB" Mode="In" Type="DateTime" />
+      <Parameter Name="MaTL" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pr_XOA_SACH">
+      <Parameter Name="MaSach" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

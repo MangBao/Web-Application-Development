@@ -1,0 +1,57 @@
+﻿
+@{
+    var path = Server.MapPath("/banner.txt");
+    var fileImage = System.IO.File.ReadAllText(path);
+    ViewBag.image = "/Assets/Img/" + fileImage;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="~/Assets/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>@ViewBag.title</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="banner">
+            <img id="logo" class="logo_banner" src="@ViewBag.image" alt="">
+        </div>
+        <div class="menu_bar">
+            <ul class="menu_list">
+                <li class="menu_item">
+                    @Html.ActionLink("Trang chủ", "Index", "Index", null, new { @class = "item_text" })
+                </li>
+                <li class="menu_item">
+                    @Html.ActionLink("Đăng ký", "Index", "Index/Dangky", null, new { @class = "item_text" })
+                </li>
+                <li class="menu_item">
+                    @Html.ActionLink("Gửi mail", "Index", "Index/SendMail", null, new { @class = "item_text" })
+                </li>
+                <li class="menu_item">
+                    @Html.ActionLink("Thay đổi banner", "Index", "Index/ChangeBanner", null, new { @class = "item_text" })
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="" style="height: 510px;">
+        <div class="grid">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="footer" style="width: 100%; height: 90px;background-color: aqua; display: flex; justify-content: center;">
+        <p style="margin: auto">
+            Copyright by MangBao &copy; @DateTime.Now.Year
+        </p>
+    </div>
+</body>
+
+</html>

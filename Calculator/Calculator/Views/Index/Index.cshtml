@@ -1,0 +1,52 @@
+﻿<!--
+    @{
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+        <div style="margin-left: 600px">
+            <h4>THỰC HIỆN PHÉP TOÁN CƠ BẢN</h4>
+            <form name="f1" action="/Index1/Index" method="post">
+                <div>
+                    Nhập a: <input type="text" name="a" /> <br />
+                    Nhập b: <input type="text" name="b" />
+                </div>
+                <div>
+                    <input type="radio" checked name="pt" value="+" />Cộng &nbsp;
+                    <input type="radio" name="pt" value="-" />Trừ &nbsp;
+                    <input type="radio" name="pt" value="*" />Nhân&nbsp;
+                    <input type="radio" name="pt" value="/" />Chia&nbsp;
+                </div>
+                <div><input type="submit" value="Tính toán" /></div>
+                <div>Kết quả: <input type="text" name="kq" value=@ViewBag.KQ /></div>
+            </form>
+        </div>
+    </body>
+    </html>
+-->
+
+
+@model Calculator.Models.Calculatorcs
+@{
+    ViewBag.Title = "Index";
+}
+@using (Html.BeginForm())
+{
+    <div>a= @Html.EditorFor(model => model.a) </div>
+    <div>b= @Html.EditorFor(model => model.b) </div>
+    <div>
+        Cộng @Html.RadioButtonFor(model => model.pt, "+", new { @checked = "checked" }) &nbsp;
+        Trừ @Html.RadioButtonFor(model => model.pt, "-") &nbsp;
+        Nhân @Html.RadioButtonFor(model => model.pt, "*") &nbsp;
+        Chia @Html.RadioButtonFor(model => model.pt, "/") &nbsp;
+    </div>
+    <div><input type="submit" value="Tính toán" /></div>
+    <div>Kết quả: <input type="text" name="kq" value=@ViewBag.KQ /></div>
+}

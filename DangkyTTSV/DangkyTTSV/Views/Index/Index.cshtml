@@ -1,0 +1,31 @@
+﻿@*@model DangkyTTSV.Models.SignUp*@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    
+        <h4>THÔNG TIN SINH VIÊN</h4>
+        <form name="f1" action="/Index/Index2" method="post">
+            <div>
+                <label>Mã số sinh viên: </label>
+                <input style="margin-bottom: 4px" type="text" name="Id" />
+                <br />
+                <label>Họ tên: </label>
+                <input style="margin-left: 55px; margin-bottom: 4px" type="text" name="Name" /><br />
+                <label>Điểm: </label>
+                <input style="margin-left: 62px; margin-bottom: 4px" type="text" name="Score" />
+            </div>
+            <div style="margin-left: 20px" id="log_up"><input type="submit" value="Đăng ký" /></div>
+
+        </form>
+        
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿@model BTLayout.Models.GetIMG
+
+@{
+    ViewBag.Title = "ChangeBanner";
+    Layout = "~/Views/Shared/_HomePage.cshtml";
+}
+<div class="container">
+    <h1 class="text-center">Thay đổi banner</h1>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 well well-sm col-md-offset-4">
+            <form name="f1" action="/Index/ChangeBanner" method="post" class="form" enctype="multipart/form-data">
+
+                <label for="">Ảnh đại diện: </label>
+
+                <div class="file-upload form-control">
+                    <input type="file" name="bannerName" />
+                    <i class="fa fa-arrow-up"></i>
+                </div>
+
+                <button id="bt_banner" class="btn btn-lg btn-primary btn-block" type="submit">
+                    Thay đổi
+                </button>
+                @*<script>
+                    $('#bt_banner').on({
+                        'click': function () {
+                            $('#logo').attr('src', '@ViewBag.image');
+                        }
+                    });
+                </script>*@
+            </form>
+        </div>
+    </div>
+</div>

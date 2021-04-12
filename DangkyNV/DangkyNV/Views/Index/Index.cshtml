@@ -1,0 +1,57 @@
+﻿@model DangkyNV.Models.EmpModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Data/main.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Thông tin thành viên đăng ký</h1>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 well well-sm col-md-offset-4">
+                <form name="f1" action="/Index/Confirm" method="post" class="form" enctype = "multipart/form-data">
+                    
+                    <label>Mã số nhân viên: </label>
+                    <input class="form-control" name="EmpID" placeholder="Mã số nhân viên" />
+                    <label>Họ tên: </label>
+                    <input class="form-control" name="Name" placeholder="Họ tên" />
+                    <label>Ngày sinh: </label>
+                    <input class="form-control" name="BirthOfDate" placeholder="Ngày sinh" />
+                    <label for="">Email: </label>
+                    <input class="form-control" name="Email" placeholder="Email" /> 
+                    <label for=""> Mật khẩu: </label>
+                    <input class="form-control" name="Password" type="password" placeholder="Mật khẩu" />
+                    <label for="">Đơn vị: </label>
+                    <input class="form-control" name="Department" placeholder="Đơn vị" />
+                    
+                        <label for="">Ảnh đại diện: </label>
+
+                        <div class="file-upload form-control">
+                            <input type="file" name="Avatar"/>
+                            <i class="fa fa-arrow-up"></i>
+                        </div>
+                     
+                    
+
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                        Đăng ký
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

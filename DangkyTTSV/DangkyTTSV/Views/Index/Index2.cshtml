@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index2</title>
+</head>
+<body>
+    <div> 
+        <form name="f1" action="/Index/Index" method="post">
+            <h4>THÔNG TIN SINH VIÊN</h4>
+            <label>Mã số sinh viên: </label>
+            <div>@ViewBag.Id</div> <br />
+            <label>Họ tên: </label>
+            <div>@ViewBag.Name</div> <br />
+            <label>Điểm: </label>
+            <div>@ViewBag.Score</div> <br />
+            <button type="submit">Quay lai</button>
+        </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿
+@{
+    
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Assets/CSS/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="margin-top:0px;">
+    <div id="banner" style="top:0px;">HỆ THỐNG QUẢN LÝ THÔNG TIN NHÂN VIÊN</div>
+    <div id="menu" style="margin-top:10px;">
+        <div>
+            @Html.ActionLink("GIỚI THIỆU", "../Gioithieu/Gioithieu", new { @class = "a" }) &nbsp;|&nbsp;
+            @Html.ActionLink("PHÒNG BAN", "../PhongBan/Index", new { @class = "a" })&nbsp;|&nbsp;
+            @Html.ActionLink("NHÂN VIÊN", "../NhanVien/Index", new { @class = "a" }) &nbsp;|&nbsp;
+            @Html.ActionLink("TÌM KIẾM", "../NhanVien/TimKiemNC", new { @class = "a" })
+            <hr style="display: block;border-top: 1px solid aqua;  margin: 8px 0;" />
+        </div>
+        <div>
+            <p align="right">  @ViewBag.NguoiDung</p>
+        </div>
+    </div>
+    <div id="content">
+        @RenderBody()
+    </div>
+    <div id="footer">
+        Copyright &copy; @DateTime.Now.Year
+    </div>
+</body>
+</html>
