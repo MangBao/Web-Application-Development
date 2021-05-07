@@ -10,8 +10,22 @@
     <title>@ViewBag.Title</title>
     <link href="~/Assets/CSS/main.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Assets/fontawesome-free-5.15.3-web/fontawesome-free-5.15.3-web/css/all.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var fileupload = $("#Avatar");
+            var image = $("#FileUpload");
+            image.click(function () {
+                fileupload.click();
+            });
+            fileupload.change(function () {
+                var fileName = $(this).val().split('\\')[$(this).val().split('\\').length - 1];
+                document.getElementById("AnhNV").value = fileName;
+            });
+        });
+    </script>
 </head>
 <body style="margin-top:0px;">
     <div id="banner" style="top:0px;">HỆ THỐNG QUẢN LÝ THÔNG TIN NHÂN VIÊN</div>

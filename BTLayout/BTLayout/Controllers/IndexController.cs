@@ -94,7 +94,7 @@ namespace BTLayout.Controllers
                 postedFileName
             };
             System.IO.File.WriteAllLines(fSave, img);
-            ViewBag.image = "/Assets/Img/" + img[0];
+            ViewBag.image = "/Assets/Img/" + postedFileName;
 
             return RedirectToAction("Index","Index/ChangeBanner");
         }

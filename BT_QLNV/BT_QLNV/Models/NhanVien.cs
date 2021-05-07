@@ -23,7 +23,9 @@ namespace BT_QLNV.Models
         public string AnhNV { get; set; }
         public string DiaChi { get; set; }
         public string MaPB { get; set; }
-    
+        public string Avatar { get; set; }
+
+
         public virtual PhongBan PhongBan { get; set; }
     }
 }

@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Giohang";
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+}
+
+<div class="grid">
+    <div class="grid__row app__content">
+        <table>
+            <tr>
+                <th>Tên sách</th>
+                <th>Giá bán</th>
+                <th>Số lượng</th>
+            </tr>
+
+            <tr class="item">
+                <td>Chắc ai đó sẽ về</td>
+                <td>115.000VND</td>
+                <td>
+                    <div class="btnbag" style="text-align:start">
+                        <div class="changenum" style="display:flex; justify-content:center">
+                            @*<button class="btn btn-outline-primary btntru">-</button>*@
+                            <input style="width:30px" type="button" value="-" class=" btntru">
+                            <input name="" min="1" max="22" value="1" class="btntext val" disabled style="width:60px; text-align:center">
+                            <input style="width:30px" type="button" value="+" class=" btncong">
+                        </div>
+                        <div class="quitbag" style="display: flex; justify-content:center">
+                            <button class="price price_color btnhuysach">Hủy sách</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="">
+                <td>Muôn kiếp thiên sinh</td>
+                <td>100.000VND</td>
+                <td>
+                    <div class="btnbag" style="text-align:start">
+                        <div class="changenum" style="display:flex; justify-content:center">
+                            @*<button class="btn btn-outline-primary btntru">-</button>*@
+                            <input style="width:30px" type="button" value="-" class=" btntru">
+                            <input name="" min="1" max="22" value="2" class="btntext val" disabled style="width:60px; text-align:center">
+                            <input style="width:30px" type="button" value="+" class=" btncong">
+                        </div>
+                        <div class="quitbag" style="display: flex; justify-content:center">
+                            <button class="price price_color btnhuysach">Hủy sách</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+        <div class="d-flex justify-content-end mt=2">
+            <button type="button" class="btn sell btn-warning mt-4" onclick="openWin()">Thanh toán</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="~/Assets/JS/index.js"></script>
+</div>
+

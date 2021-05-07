@@ -1,8 +1,13 @@
-﻿@model IEnumerable<BT_QLNV.Models.NhanVien>
+﻿@*@model IEnumerable<BT_QLNV.Models.NhanVien>
+*@@model PagedList.IPagedList<BT_QLNV.Models.NhanVien>
+
+@using PagedList.Mvc;
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shaded/_LayoutQLNV.cshtml";
+    string gtinh = "";
+    int i = 0;
 }
 
 <h2>Index</h2>
@@ -10,67 +15,47 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.HoNV)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TenNV)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GioiTinh)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NgaySinh)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Luong)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AnhNV)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DiaChi)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PhongBan.TenPB)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.HoNV)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenNV)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GioiTinh)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NgaySinh)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Luong)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AnhNV)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DiaChi)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhongBan.TenPB)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaNV }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaNV }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaNV })
-        </td>
-    </tr>
-}
 
-</table>
+<div class="row">
+    @foreach (var item in Model)
+    {
+
+
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="~/Assets/avatar.jpg" alt="Card image cap">
+                <div class="card-body">
+                    @Html.DisplayFor(modelItem => item.HoNV)
+                    @Html.DisplayFor(modelItem => item.TenNV)<br />
+                    @{if (item.GioiTinh == true)
+                        { gtinh = "Nam"; }
+                        else
+                        { gtinh = "Nữ"; }
+                    }
+                    @gtinh<br />
+                    @Html.DisplayFor(modelItem => item.NgaySinh)<br />
+                    @Html.DisplayFor(modelItem => item.Luong)<br />
+                    @Html.DisplayFor(modelItem => item.AnhNV)<br />
+                    @Html.DisplayFor(modelItem => item.DiaChi)<br />
+                    @Html.DisplayFor(modelItem => item.PhongBan.TenPB)<br />
+
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaNV }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaNV }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaNV })
+                </div>
+            </div>
+
+        </div>
+
+
+
+    }
+    <!-- Thêm mã phân trang -->
+
+</div>
+<br />
+    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+    <!-- Kết thúc -->

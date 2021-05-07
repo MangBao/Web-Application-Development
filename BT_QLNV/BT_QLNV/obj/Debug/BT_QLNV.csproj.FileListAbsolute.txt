@@ -74,3 +74,7 @@ E:\Web Application Development\BT_QLNV\BT_QLNV\obj\Debug\BT_QLNV.csproj.CoreComp
 E:\Web Application Development\BT_QLNV\BT_QLNV\obj\Debug\BT_QLNV.csproj.CopyComplete
 E:\Web Application Development\BT_QLNV\BT_QLNV\obj\Debug\BT_QLNV.dll
 E:\Web Application Development\BT_QLNV\BT_QLNV\obj\Debug\BT_QLNV.pdb
+E:\Web Application Development\BT_QLNV\BT_QLNV\bin\PagedList.dll
+E:\Web Application Development\BT_QLNV\BT_QLNV\bin\PagedList.Mvc.dll
+E:\Web Application Development\BT_QLNV\BT_QLNV\bin\PagedList.xml
+E:\Web Application Development\BT_QLNV\BT_QLNV\bin\PagedList.Mvc.xml
